@@ -19,16 +19,31 @@
                 <span>Acertei?</span>
             </article>
             <article>
-                <div id="lower"><h4>Menor</h4></div>
-                <div id="correct"><h4>Correto</h4></div>
-                <div id="higher"><h4>Maior</h4></div>
+                <div id="lower"><h4>Não, é menor</h4></div>
+                <div id="correct"><h4>Sim, está correto</h4></div>
+                <div id="higher"><h4>Não, é maior</h4></div>
             </article>
         </section>
-        <section id="win">
-
+        <section id="win" class="hidden">
+            <article>
+                <h2>Fim de Jogo!</h2>
+                <p>Tentativas:<span></span></p>
+                <p>Tempo gasto: <span id="finalTime"></span></p>
+            </article>
+            <article>
+                <h3>Deseja jogar novamente?</h3>
+                <div id="options">
+                    <div id="playAgain">Sim</div>
+                    <div id="reset">Não</div>
+                </div>  
+            </article>
         </section>
-        <section id="time">
-            
+        <section id="time" class="hidden">
+            <div class="time" id="minutes">00</div>
+            <div class="separator">:</div>
+            <div class="time" id="seconds">00</div>
+            <div class="separator">:</div>
+            <div class="time" id="milliseconds">000</div>
         </section>
     </main>
     <script src="assets/js/script.js" type="text/javascript"></script>

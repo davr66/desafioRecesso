@@ -7,6 +7,9 @@ body{
     background-color: rgb(31, 31, 31);
     color: #fff;
 }
+h2{
+    font-size: 60px;
+}
 
 #menu{
     display: flex;
@@ -20,7 +23,7 @@ body{
     font-size: 5rem;
 }
 
-#menu p{
+p{
     font-size: 1.25rem;
 }
 
@@ -35,7 +38,7 @@ span{
     justify-content: center;
     align-items: center;
     gap: 40px;
-    height: 100vh;
+    height: 80vh;
 }
 
 #guess article{
@@ -48,13 +51,43 @@ span{
     background: black;
     padding: 10px 50px;
 }
-#guess article h2{
-    font-size: 60px;
-}
 
 #guess article div{
     background: black;
     padding: 50px  100px;
+    cursor: pointer;
+}
+
+#win, #win article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    gap:20px;
+}
+
+#time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    font-size: 2rem;
+    height:20vh;
+}
+
+#options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px; 
+    font-size: 25px;
+}
+
+#options div{
+    background-color: black;
+    padding: 15px 50px;
+    cursor: pointer;
 }
 
 
