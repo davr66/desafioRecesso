@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(31, 31, 31);
+    color: #fff;
+    font-family: 'Press Start 2P', sans-serif;
+}
+h2{
+    font-size: 40px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    height: 10vh;
+    font-size: 5px;
+}
+
+footer p a{
+    color: #fff;
+}
+footer p a:hover{
+    color:violet;
+    font-size: 25px;
+}
+
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    gap:3%;
+}
+
+#menu h1{
+    font-size: 4rem;
+}
+
+p{
+    font-size: 1.1rem;
+}
+
+span{
+    margin-top: 10px;
+    font-style: italic;
+}
+
+#guess {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 80vh;
+}
+
+#guess article{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+} 
+#guess div {
+    background: black;
+    padding: 10px 50px;
+    border-radius: 20px;
+}
+
+#guess article div{
+    background: black;
+    padding: 50px  100px;
+    cursor: pointer;
+}
+
+#guess article div:hover{
+    color: #000;
+    background-color: #f5f5f5;
+    transform: scale(1.05);
+}
+
+#win, #win article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    gap:20px;
+}
+
+#time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    font-size: 2rem;
+    height:20vh;
+}
+
+#options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px; 
+    font-size: 25px;
+}
+
+#options div{
+    background-color: black;
+    padding: 15px 50px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#options div:hover {
+    color: #000;
+    background-color: #f5f5f5;
+    transform: scale(1.05);
+}
+
+
+.hidden{
+    display:none !important;
+}
