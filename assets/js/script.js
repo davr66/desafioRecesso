@@ -8,12 +8,15 @@ const timeSection = document.getElementById('time');
 const guessField = document.querySelector('#guess article h2');
 const triesField = document.querySelector('#win article p span');
 const finalTimeField = document.getElementById('finalTime');
+const footer = document.querySelector('footer');
 // Botões de instruções/início
 const correctBtn = document.getElementById('correct');
 const lowerBtn = document.getElementById('lower');
 const higherBtn = document.getElementById('higher');
 const playAgainBtn = document.getElementById('playAgain');
 const resetBtn = document.getElementById('reset');
+//controle de eventos
+let timesPressed = 0;
 //cronometro
 const minutesEl = document.querySelector("#minutes");
 const secondsEl = document.querySelector("#seconds");
@@ -27,6 +30,8 @@ let isPaused = false;
 
 let finalTimeStr;
 
+
+// FUNÇÕES
 function startTimer() {
     interval = setInterval(() =>{
 
@@ -94,15 +99,25 @@ function guessNumber(index){
     tries++;
 }
 
-window.addEventListener('keydown',(e) => {
-    if (e.key == 'Enter') {
+function startGame(e){
+    if (timesPressed == 0) {
+        timesPressed++;
+
         menuSection.classList.add('hidden');
+        footer.classList.add('hidden');
         guessSection.classList.remove('hidden');
         timeSection.classList.remove('hidden');
         guessNumber(3);
         startTimer();
     }
-})
+}
+
+
+// EVENTOS
+window.addEventListener('keydown',(e) =>{
+    if (e.key == 'Enter') {
+        startGame(e)
+    }});
 higherBtn.addEventListener('click',() => {guessNumber(0)});
 lowerBtn.addEventListener('click',() => {guessNumber(1)});
 correctBtn.addEventListener('click',() => {
@@ -120,7 +135,10 @@ playAgainBtn.addEventListener('click',()=>{
     winSection.classList.add('hidden');
     guessSection.classList.remove('hidden');
     timeSection.classList.remove('hidden');
+    min=0;
+    max=100;
     tries = 0;
+    guessNumber(3);
 })
 
 resetBtn.addEventListener('click',()=>{
